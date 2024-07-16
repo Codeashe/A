@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de hacienda</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            /* Estilos específicos para pantallas pequeñas */
+            body {
+             font-size: 14px;
+         }
+     }
+    </style>
+</head>
+<body>
+    <script>
+        // Saludo inicial
+        let saludo_inicial = "👀";
+
+        // Mostrar saludo inicial
+        document.write(saludo_inicial);
+        document.write('<br>');
+
+        // Pedir nombre del usuario
+        let tuNombre = prompt("¿Cuál es tu nombre?");
+
+        let nombreEsperado1 = "Axel"; 
+        let nombreEsperado2 = "axel";
+
+        // Convertir el nombre ingresado a minúsculas para hacer una comparación insensible a mayúsculas/minúsculas
+        let nombreIngresadoLowerCase = tuNombre.toLowerCase();
+
+        // Validar si el nombre ingresado coincide con alguno de los nombres esperados
+        if (nombreIngresadoLowerCase === nombreEsperado1.toLowerCase() || nombreIngresadoLowerCase === nombreEsperado2.toLowerCase()) {
+            // Mostrar mensaje de propuesta de noviazgo
+            let respuestaNoviazgo = confirm(`Holaa ${tuNombre}, ¿te gustaría ser mi chavo?👉👈`);
+            if (respuestaNoviazgo) {
+                document.write('<a href="https://www.youtube.com/watch?v=wjOSFpt5ie4&t=176s" target="_blank">❤️Ahora somos novios❤️</a> <br></br>');
+                document.write('<img src="https://i.pinimg.com/originals/66/49/81/66498147a26006e130cb4a19e9511e9e.jpg" alt="Gatito enamorado"')
+            } else {
+                    let confirmacion = confirm(`Oye ${tuNombre} esa no es una opción 😾`);
+                    if(confirmacion){
+                        document.write("Eso, muy bien:)");
+                        setTimeout(() => {
+                        window.location.reload(); // Recargar la página si se elige continuar
+                    }, 1000);
+                        } else {
+                        document.write('Bromitaaa,gracias por participar en esta prueba piloto, fue de chill🤙');
+                    }
+                }
+            } else {
+            // Mostrar mensaje de que la persona no es la esperada
+            document.write(`Tú no eres Axel, vete de aquí metichee😾.`);
+        }
+    </script>
+</body>
+</html>
